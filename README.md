@@ -55,4 +55,6 @@ ClienteAppMinimal/
 
 ## 📬 Contact
 
-Created by Wellington Americano – [GitHub Profile](https://github.com/americanosdigital)
+Created by Wellington Americano 
+– [americanodigital@gmail.com](mailto:americanodigital@gmail.com)
+– [GitHub Profile](https://github.com/americanosdigital)
