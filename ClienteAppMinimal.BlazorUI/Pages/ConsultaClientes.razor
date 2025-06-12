@@ -1,0 +1,51 @@
+﻿@page "/consulta-clientes"
+
+<div class="m-4">
+    <h4>Consulta de clientes</h4>
+    <p>Listagem de clientes cadastrados.</p>
+    <hr />
+
+    <table class="table table-sm table-responsive">
+        <thead>
+            <tr>
+                <th hidden>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Cadastrado em:</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in clientes)
+            {
+                <tr>
+                    <td hidden>@cliente.Id</td>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.DataHoraCriacao.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Quantidade de clientes: @clientes.Count</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+@using ClienteAppMinimal.BlazorUI.Models
+
+@inject HttpClient Http
+
+@code {
+
+    private List<ClienteModel> clientes = new();
+
+    //Método executando quando o componente é inicializado
+    protected override async Task OnInitializedAsync()
+    {
+        //consultando e armazenando a lista de clientes obtida da API
+        clientes = await Http.GetFromJsonAsync<List<ClienteModel>>("api/v1/clientes");
+    }
+}

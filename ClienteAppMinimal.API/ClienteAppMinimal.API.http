@@ -1,0 +1,6 @@
+@ClienteAppMinimal.API_HostAddress = http://localhost:5281
+
+GET {{ClienteAppMinimal.API_HostAddress}}/Cliente/
+Accept: application/json
+
+###
