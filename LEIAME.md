@@ -15,7 +15,7 @@ Projeto exemplo minimalista desenvolvido com .NET 9, demonstrando funcionalidade
 ClienteAppMinimal/
 │
 ├── Domain/           # Entidades de domínio, interfaces e objetos de valor
-├── Infra/            # Repositórios e contexto de banco de dados (EF Core ou similar)
+├── Infra/            # Repositórios e contexto de banco de dados (EF Core ou similar) para armazenar em memoria
 ├── API/              # Endpoints da Minimal API para Clientes
 └── UI/               # Interface Blazor para interação com a API
 ```
@@ -48,7 +48,7 @@ ClienteAppMinimal/
 
 ## ✍️ Funcionalidades
 
-- ✅ Cadastro de novo cliente (Nome, Email, CPF)
+- ✅ Cadastro de novo cliente (Nome, Email)
 - 🔍 Consulta de clientes cadastrados
 - ✅ Separação clara de responsabilidades com base em DDD
 - 🔄 API e UI desacopladas
