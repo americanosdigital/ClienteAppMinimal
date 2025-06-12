@@ -7,7 +7,7 @@ A minimal example project built with .NET 9 demonstrating basic Customer Registr
 - .NET 9
 - Minimal APIs
 - Blazor (UI Layer)
-- DDD Architecture (Domain, Infrastructure, API, UI)
+- DDD Architecture (Domain, Infrastructure, API, UI) to store in memory
 
 ## 📁 Project Structure
 
@@ -48,7 +48,7 @@ ClienteAppMinimal/
 
 ## ✍️ Features
 
-- ✅ Register new customer (Name, Email, CPF)
+- ✅ Register new customer (Name, Email)
 - 🔍 Query registered customers
 - ✅ Clean separation of concerns following DDD principles
 - 🔄 API and UI decoupled for scalability
